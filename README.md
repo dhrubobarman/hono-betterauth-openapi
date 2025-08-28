@@ -27,31 +27,28 @@ A modern backend application built with [Hono](https://hono.dev/), featuring aut
 bun install
 ```
 
-2. Set up your environment variables:
-   Create a `.env` file in the root directory with the following required variables:
+2. Set up your environment variables
+
+Create a `.env` file in the project root with these variables (example):
 
 ```env
-# Database Configuration
+# Database
 DATABASE_URL=postgresql://user:password@localhost:5432/your_database
 
-# Server Configuration
-PORT=4000                  # Default port for the server
-LOG_LEVEL=debug           # One of: fatal, error, warn, info, debug, trace, silent
-NODE_ENV=development     # Environment: development, production, etc.
+# Server
+PORT=4000
+LOG_LEVEL=debug # fatal|error|warn|info|debug|trace|silent
+NODE_ENV=development
 
-# OAuth Configuration (for GitHub authentication)
+# OAuth (GitHub)
 GITHUB_CLIENT_ID=your_github_client_id
 GITHUB_CLIENT_SECRET=your_github_client_secret
 ```
 
-Each variable is validated using Zod schema validation:
+Notes:
 
-- `DATABASE_URL`: PostgreSQL connection string (required)
-- `PORT`: Server port number (defaults to 4000)
-- `LOG_LEVEL`: Logging level for Pino logger (required)
-- `NODE_ENV`: Environment name (defaults to "development")
-- `GITHUB_CLIENT_ID`: GitHub OAuth app client ID (required for authentication)
-- `GITHUB_CLIENT_SECRET`: GitHub OAuth app client secret (required for authentication)
+- The project validates environment variables at startup using Zod. If a required variable is missing or invalid the process will exit with an error and a helpful validation message.
+- `PORT` defaults to `4000` when not provided.
 
 3. Run database migrations:
 
@@ -65,7 +62,7 @@ bun run drizzle:push
 bun run dev
 ```
 
-The server will start on `http://localhost:3000` by default.
+The server will start on `http://localhost:4000` by default (or the value of `PORT`).
 
 ## Available Scripts
 
@@ -99,8 +96,8 @@ src/
 
 Once the server is running, you can access the API documentation at:
 
-- Visit [http://localhost:3000/reference](http://localhost:3000/reference) - Interactive API documentation using Scalar UI
-- `/docs` - OpenAPI documentation in JSON format
+- Interactive UI: http://localhost:4000/reference
+- OpenAPI JSON: http://localhost:4000/docs
 
 The Scalar UI provides a modern, interactive interface for exploring and testing your API endpoints.
 
