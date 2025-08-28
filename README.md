@@ -28,11 +28,30 @@ bun install
 ```
 
 2. Set up your environment variables:
-   Create a `.env` file in the root directory with:
+   Create a `.env` file in the root directory with the following required variables:
 
 ```env
+# Database Configuration
 DATABASE_URL=postgresql://user:password@localhost:5432/your_database
+
+# Server Configuration
+PORT=4000                  # Default port for the server
+LOG_LEVEL=debug           # One of: fatal, error, warn, info, debug, trace, silent
+NODE_ENV=development     # Environment: development, production, etc.
+
+# OAuth Configuration (for GitHub authentication)
+GITHUB_CLIENT_ID=your_github_client_id
+GITHUB_CLIENT_SECRET=your_github_client_secret
 ```
+
+Each variable is validated using Zod schema validation:
+
+- `DATABASE_URL`: PostgreSQL connection string (required)
+- `PORT`: Server port number (defaults to 4000)
+- `LOG_LEVEL`: Logging level for Pino logger (required)
+- `NODE_ENV`: Environment name (defaults to "development")
+- `GITHUB_CLIENT_ID`: GitHub OAuth app client ID (required for authentication)
+- `GITHUB_CLIENT_SECRET`: GitHub OAuth app client secret (required for authentication)
 
 3. Run database migrations:
 
