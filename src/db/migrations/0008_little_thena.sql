@@ -1,0 +1,1 @@
+ALTER TABLE "jwks" ALTER COLUMN "id" SET DATA TYPE varchar(36);

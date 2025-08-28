@@ -1,0 +1,76 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1755794974930,
+      "tag": "0000_bitter_goblin_queen",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1755795057549,
+      "tag": "0001_mighty_mentor",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1755795795878,
+      "tag": "0002_fluffy_red_shift",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1755795839191,
+      "tag": "0003_brainy_callisto",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1755796029851,
+      "tag": "0004_magical_electro",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1756284156319,
+      "tag": "0005_spooky_dormammu",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1756394931272,
+      "tag": "0006_massive_doorman",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1756395253158,
+      "tag": "0007_round_komodo",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1756399203435,
+      "tag": "0008_little_thena",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1756400805253,
+      "tag": "0009_worried_daimon_hellstrom",
+      "breakpoints": true
+    }
+  ]
+}

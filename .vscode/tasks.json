@@ -1,0 +1,12 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run Bun Dev Server",
+      "type": "shell",
+      "command": "bun run src/index.ts",
+      "group": "build",
+      "problemMatcher": []
+    }
+  ]
+}
